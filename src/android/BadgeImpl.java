@@ -57,7 +57,7 @@ public class BadgeImpl {
         SharedPreferences settings = getSharedPreferences(ctx);
         int badge = settings.getInt(BADGE_KEY, 0);
         
-		return int;
+		return badge;
     }
 
     /**
