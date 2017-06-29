@@ -14,11 +14,7 @@
       "ecosystem:cordova"
   ],
   "platforms": [
-      "android",
-      "browser",
-      "ios",
-      "osx",
-      "windows"
+      "android"
   ],
   "engines": [
     {
@@ -32,10 +28,6 @@
     {
       "name": "cordova-plugman",
       "version": ">=4.2.0"
-    },
-    {
-      "name": "apple-ios",
-      "version": ">=10"
     }
   ],
   "author": "Sebastián Katzer",

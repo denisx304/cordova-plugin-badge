@@ -45,35 +45,6 @@
         <engine name="cordova-plugman" version=">=4.2.0"/><!-- needed for gradleReference support -->
     </engines>
 
-    <!-- js -->
-    <js-module src="www/badge.js" name="Badge">
-        <clobbers target="cordova.plugins.notification.badge" />
-    </js-module>
-
-    <!-- ios -->
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="Badge">
-                <param name="ios-package" value="APPBadge"/>
-            </feature>
-        </config-file>
-
-        <header-file src="src/ios/APPBadge.h" />
-        <source-file src="src/ios/APPBadge.m" />
-    </platform>
-
-    <!-- osx -->
-    <platform name="osx">
-        <config-file target="config.xml" parent="/*">
-            <feature name="Badge">
-                <param name="osx-package" value="APPBadge"/>
-            </feature>
-        </config-file>
-
-        <header-file src="src/osx/APPBadge.h" />
-        <source-file src="src/osx/APPBadge.m" />
-    </platform>
-
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
@@ -91,30 +62,6 @@
         <source-file
             src="src/android/BadgeImpl.java"
             target-dir="src/de/appplant/cordova/plugin/badge" />
-    </platform>
-
-    <!-- browser -->
-    <platform name="browser">
-        <config-file target="config.xml" parent="/*">
-            <feature name="Badge">
-                <param name="browser-package" value="Badge"/>
-            </feature>
-        </config-file>
-
-        <js-module src="src/browser/favico.min.js" name="Badge.Favico">
-            <clobbers target="cordova.plugins.notification.badge.Favico" />
-        </js-module>
-
-        <js-module src="src/browser/BadgeProxy.js" name="Badge.Proxy">
-            <runs />
-        </js-module>
-    </platform>
-
-    <!-- windows -->
-    <platform name="windows">
-        <js-module src="src/windows/BadgeProxy.js" name="Badge.Proxy" >
-            <runs />
-        </js-module>
     </platform>
 
 </plugin>
